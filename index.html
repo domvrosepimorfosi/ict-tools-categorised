@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tools by Category & Level (2025) — Simple Table</title>
+<style>
+  /* Light-only, vivid palette; simple table mirroring DOCX with strict column widths */
+  :root{
+    --bg: #fffdf6;
+    --ink: #1b2430;
+    --muted: #4b5568;
+    --table-border: #d7dce7;
+    /* Vivid category swatches */
+    --cat-1: #ffe24a;  /* sunflower */
+    --cat-2: #5ad1ff;  /* sky */
+    --cat-3: #7be495;  /* mint */
+    --cat-4: #ff8cc8;  /* pink */
+    --cat-5: #b79aff;  /* lavender */
+    /* Ticks & links */
+    --tick-bg: #c9f6d5;
+    --tick-ink: #067a33;
+    --link: #0050ff;
+  }
+  html, body { height:100%; background: var(--bg) !important; background-image: none !important; color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, "Noto Sans", sans-serif; }
+  .wrap { max-width: 1100px; margin: 24px auto 40px; padding: 0 16px; }
+  
+  /* --- MODIFIED H1 --- */
+  h1 { 
+    margin: 6px 0 4px; 
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  /* --- ADDED LOGO STYLE --- */
+  .header-logo {
+      height: 120px;
+      width: 120px;
+      margin-right: 20px;
+      border-radius: 50%;
+      border: none;
+      flex-shrink: 0;
+  }
+  /* --- END MODIFICATIONS --- */
+  
+  p.lead { margin-top: 0; color: var(--muted); }
+  .legend { background: #fff; border: 1px solid var(--table-border); padding: 10px 12px; border-radius: 10px; margin: 14px 0 18px; font-size: 14px; }
+  .legend .badge { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid var(--table-border); margin-right: 8px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 15px; table-layout: fixed; }
+  thead th { padding: 10px 12px; border-bottom: 2px solid var(--table-border); background: #fff; vertical-align: middle; }
+  thead th:first-child{ text-align: left; padding-left: 8px; }
+  thead th:nth-child(n+2){ text-align: center; }
+  tbody td { padding: 10px 12px; border-bottom: 1px solid var(--table-border); vertical-align: middle; }
+  tbody tr:hover td { background: #fff; }
+
+  /* Tight alignment for first column (tool names) */
+  tbody td.tool { padding-left: 8px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  tbody td.tool a { color: var(--link); text-decoration: none; font-weight: 700; display:block; padding-left: 0; }
+  tbody td.tool a:hover{ text-decoration: underline; }
+
+  /* Category rows spanning all columns, aligned exactly with tool text */
+  tr.cat > td { padding: 10px 12px 10px 8px; }
+  .cat span { display: inline-block; padding: 8px 12px 8px 0; border-radius: 12px; margin-left: -4px; }
+  .cat-1 { background: var(--cat-1); }
+  .cat-2 { background: var(--cat-2); }
+  .cat-3 { background: var(--cat-3); }
+  .cat-4 { background: var(--cat-4); }
+  .cat-5 { background: var(--cat-5); }
+
+  /* Tick cells: fixed box width for perfect alignment */
+  .tick { text-align:center; }
+  .tick .box { display:inline-block; width: 28px; height: 24px; line-height: 24px; border-radius: 8px; background: #fff; border:1px solid var(--table-border); }
+  .tick .ok { background: var(--tick-bg); color: var(--tick-ink); font-weight: 700; }
+
+  footer { text-align:center; margin: 24px 0; color: var(--muted); }
+  .footer-inner { display:inline-block; padding:10px 14px; border:1px dashed var(--table-border); border-radius: 10px; background:#fff; }
+
+  /* Print-friendly */
+  @media print{
+    .legend{ border:0; }
+    .header-logo { display: none; } /* Hide logo on print */
+    h1 { justify-content: flex-start; } /* Keep left-align on print */
+  }
+  /* Kill any stray decorative overlays */
+  *::before, *::after { background: none !important; background-image: none !important; box-shadow: none !important; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>
+      <img src="pdhub-logo.png" alt="PD Hub Logo" class="header-logo">
+      Tools by Category & Level (2025)
+    </h1>
+    <p class="lead">Compiled by Panagiotis Domvros. Columns: <strong>Tool</strong> · <strong>Elementary</strong> · <strong>Junior High</strong> · <strong>Senior High</strong>.</p>
+
+    <div class="legend"><span class="badge">E = Elementary</span><span class="badge">JH = Junior High</span><span class="badge">SH = Senior High</span> <span class="badge">✓ = Recommended</span></div>
+
+    <table>
+      <colgroup>
+        <col style="width:auto"/>
+        <col style="width:96px"/>
+        <col style="width:96px"/>
+        <col style="width:96px"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>E</th>
+          <th>JH</th>
+          <th>SH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cat"><td colspan="4"><span class="cat-1">Crosswords & word puzzles</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://crosswordlabs.com/" target="_blank" rel="noopener">Crossword Labs</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.discoveryeducation.com/free-puzzlemaker/" target="_blank" rel="noopener">Discovery Education – PuzzleMaker</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.eclipsecrossword.com/" target="_blank" rel="noopener">EclipseCrossword (Windows)</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.educandy.com/" target="_blank" rel="noopener">Educandy</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://flippity.net/" target="_blank" rel="noopener">Flippity</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://wordmint.com/" target="_blank" rel="noopener">WordMint</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-2">Digital books / e-textbooks</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.commonlit.org/" target="_blank" rel="noopener">CommonLit</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://ebooks.edu.gr/" target="_blank" rel="noopener">Greek Digital School Books (ebooks.edu.gr)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://openlibrary.org/" target="_blank" rel="noopener">Open Library</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://openstax.org/" target="_blank" rel="noopener">OpenStax</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://home.oxfordowl.co.uk/reading/" target="_blank" rel="noopener">Oxford Owl (Primary)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box"> </span></td><td class="tick"><span class="box"> </span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.gutenberg.org/" target="_blank" rel="noopener">Project Gutenberg</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-3">Docs & forms (attendance, quick checks)</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.airtable.com/solutions/forms" target="_blank" rel="noopener">Airtable Forms</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.google.com/forms/about/" target="_blank" rel="noopener">Google Forms</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.jotform.com/" target="_blank" rel="noopener">Jotform</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://forms.microsoft.com/" target="_blank" rel="noopener">Microsoft Forms</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.typeform.com/" target="_blank" rel="noopener">Typeform</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.zoho.com/forms/" target="_blank" rel="noopener">Zoho Forms</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-4">Greece‑specific platform</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://auth.4all.e-me.edu.gr/" target="_blank" rel="noopener">e‑me (GR national platform)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-5">H5P‑style interactive content</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://genial.ly/" target="_blank" rel="noopener">Genially</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://h5p.org/" target="_blank" rel="noopener">H5P</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://learningapps.org/" target="_blank" rel="noopener">LearningApps.org</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://lumi.education/" target="_blank" rel="noopener">Lumi (offline H5P authoring)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://nearpod.com/" target="_blank" rel="noopener">Nearpod</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.peardeck.com/products/pear-deck" target="_blank" rel="noopener">Pear Deck Learning</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.thinglink.com/" target="_blank" rel="noopener">ThingLink</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-1">Interactive lessons (slides + checks)</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://genially.com/education/for-schools/" target="_blank" rel="noopener">Genially (interactive lessons)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://nearpod.com/" target="_blank" rel="noopener">Nearpod</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.peardeck.com/products/pear-deck" target="_blank" rel="noopener">Pear Deck Learning</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-2">Interactive worksheets</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.bookwidgets.com/" target="_blank" rel="noopener">BookWidgets</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://classkick.com/" target="_blank" rel="noopener">Classkick</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.kamiapp.com/" target="_blank" rel="noopener">Kami</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.liveworksheets.com/" target="_blank" rel="noopener">Liveworksheets</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="httpshttps://www.topworksheets.com/" target="_blank" rel="noopener">TopWorksheets</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.wizer.me/" target="_blank" rel="noopener">Wizer.me</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://wordwall.net/" target="_blank" rel="noopener">Wordwall</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-3">Jeopardy/Millionaire‑style games</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.superteachertools.us/" target="_blank" rel="noopener">SuperTeacherTools</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-4">LMS / class hubs</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.instructure.com/canvas" target="_blank" rel="noopener">Canvas</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://edu.google.com/products/classroom/" target="_blank" rel="noopener">Google Classroom</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.microsoft.com/education/products/microsoft-teams" target="_blank" rel="noopener">Microsoft Teams for Education</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://moodle.org/" target="_blank" rel="noopener">Moodle</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://e-me.edu.gr/" target="_blank" rel="noopener">e‑me</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-5">Listening practice (ESL/EFL)</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://learnenglishteens.britishcouncil.org/skills/listening" target="_blank" rel="noopener">British Council LearnEnglish Teens – Listening</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://elllo.org/" target="_blank" rel="noopener">ELLLO</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.lyricstraining.org/" target="_blank" rel="noopener">LyricsTraining / LingoClip</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-1">Live polls, Q&A, word clouds</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://ahaslides.com/" target="_blank" rel="noopener">AhaSlides</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://kahoot.com/" target="_blank" rel="noopener">Kahoot!</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.mentimeter.com/" target="_blank" rel="noopener">Mentimeter</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.polleverywhere.com/" target="_blank" rel="noopener">Poll Everywhere</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://quizizz.com/" target="_blank" rel="noopener">Quizizz Live</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.slido.com/" target="_blank" rel="noopener">Slido</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.vevox.com/" target="_blank" rel="noopener">Vevox</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-2">Maps / virtual field trips</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.360cities.net/" target="_blank" rel="noopener">360Cities</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.geoguessr.com/" target="_blank" rel="noopener">GeoGuessr</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://artsandculture.google.com/" target="_blank" rel="noopener">Google Arts & Culture</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://earth.google.com/web/" target="_blank" rel="noopener">Google Earth</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://maps.google.com/" target="_blank" rel="noopener">Google Maps</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.google.com/streetview/" target="_blank" rel="noopener">Street View</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.nationalgallery.org.uk/visiting/virtual-tours" target="_blank" rel="noopener">The National Gallery – Virtual Tours</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-3">Mind‑mapping & organizers</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://popplet.com/" target="_blank" rel="noopener">Popplet</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-4">Open educational resources / repositories</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.europeana.eu/" target="_blank" rel="noopener">Europeana</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.khanacademy.org/" target="_blank" rel="noopener">Khan Academy</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.merlot.org/merlot/" target="_blank" rel="noopener">MERLOT</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.oercommons.org/" target="_blank" rel="noopener">OER Commons</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://photodentro.edu.gr/" target="_blank" rel="noopener">Photodentro</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://learninglab.si.edu/" target="_blank" rel="noopener">Smithsonian Learning Lab</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.tes.com/teaching-resources" target="_blank" rel="noopener">TES Resources</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-5">Picture description practice (prompt banks)</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.teachingenglish.org.uk/" target="_blank" rel="noopener">British Council – TeachingEnglish</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.cambridgeenglish.org/teaching-english/resources-for-teachers/" target="_blank" rel="noopener">Cambridge – Resources for Teachers</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://ellii.com/resources/flashcards" target="_blank" rel="noopener">Ellii (formerly ESL Library) Picture Sets</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.pics4learning.com/" target="_blank" rel="noopener">Pics4Learning</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-1">Quizzes & quick checks (incl. routines)</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.blooket.com/" target="_blank" rel="noopener">Blooket</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.formative.com/" target="_blank" rel="noopener">Formative</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://kahoot.com/" target="_blank" rel="noopener">Kahoot!</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.quizalize.com/" target="_blank" rel="noopener">Quizalize</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://quizizz.com/" target="_blank" rel="noopener">Quizizz</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.socrative.com/" target="_blank" rel="noopener">Socrative</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.superteachertools.us/" target="_blank" rel="noopener">SuperTeacherTools</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-2">Reading texts / leveled reading</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://breakingnewsenglish.com/" target="_blank" rel="noopener">Breaking News English</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://learnenglish.britishcouncil.org/skills/reading" target="_blank" rel="noopener">British Council – LearnEnglish Readings</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.commonlit.org/" target="_blank" rel="noopener">CommonLit</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://newsela.com/" target="_blank" rel="noopener">Newsela</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://readtheory.org/" target="_blank" rel="noopener">ReadTheory</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-3">Rhyme & vocabulary tools</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://onelook.com/thesaurus/" target="_blank" rel="noopener">OneLook Thesaurus</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://rhymebrain.com/" target="_blank" rel="noopener">RhymeBrain</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.rhymezone.com/" target="_blank" rel="noopener">RhymeZone</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.rhymer.com/" target="_blank" rel="noopener">Rhymer</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="httpsS://www.wordhippo.com/" target="_blank" rel="noopener">WordHippo</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-4">Safe(er) classroom video & 'no‑distraction' sharing</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://edpuzzle.com/" target="_blank" rel="noopener">Edpuzzle</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://safeshare.tv/" target="_blank" rel="noopener">SafeShare (safeshare.tv)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://video.link/" target="_blank" rel="noopener">VideoLink (video.link)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.youtube-nocookie.com/" target="_blank" rel="noopener">YouTube (privacy‑enhanced embed)</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-5">Screen/video messages & student submissions</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.loom.com/use-case/education" target="_blank" rel="noopener">Loom for Education</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+        <tr class="cat"><td colspan="4"><span class="cat-1">Shared boards / walls</span></td></tr>
+        <tr>
+          <td class="tool"><a href="https://www.canva.com/features/whiteboards/" target="_blank" rel="noopener">Canva Whiteboards</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://www.figma.com/figjam/" target="_blank" rel="noopener">FigJam</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class_name="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://en.linoit.com/" target="_blank" rel="noopener">Linoit</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="httpss://miro.com/" target="_blank" rel="noopener">Miro</a></td>
+          <td class="tick"><span class="box"> </span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://note.ly/" target="_blank" rel="noopener">Note.ly</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https_://el.padlet.com/" target="_blank" rel="noopener">Padlet</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+        <tr>
+          <td class="tool"><a href="https://wakelet.com/" target="_blank" rel="noopener">Wakelet</a></td>
+          <td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td><td class="tick"><span class="box ok">✓</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <footer>
+      <div class="footer-inner">✨✍️ Created by Panagiotis Domvros, English and Drama Teacher, All Rights Reserved ✍️✨</div>
+    </footer>
+  </div>
+</body>
+</html>
